@@ -1,0 +1,60 @@
+.list{
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+}
+.list-item{
+  font-size: 24px;
+  cursor: pointer;
+  display: block;
+  padding: 8px;
+  border-radius: 8px;
+}
+.list-item:hover{
+  background: rgba(123,100,50,.5)
+}
+.add-button{
+  display: block;
+  border: none;
+  padding: 10px;
+  text-transform: uppercase;
+  background: indianred;
+  color: #EEEEEE;
+  cursor: pointer;
+}
+.add-button:hover{
+  background: darkred;
+}
+
+/* ANIMATION */
+
+.fade-enter {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity .3s ease-out, transform .3s ease-out;
+}
+
+.fade-leave {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-leave-active{
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity .3s ease-out, transform .3s ease-out;
+}
+
+.fade-appear {
+  opacity: 0;
+}
+
+.fade-appear-active{
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
