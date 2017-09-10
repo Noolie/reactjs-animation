@@ -2,10 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-const styles = {
-  transition: 'all 1s ease-out'
-};
-
 class App extends React.Component {
   constructor(){
     super();
@@ -26,6 +22,7 @@ class App extends React.Component {
   }
 
   removeNumber(ev){
+      console.log(this.state.content)
     let removeItem = Number(ev.target.getAttribute('data-id'))
     let updatedContent = this.state.content;
     updatedContent.splice(removeItem, 1);
@@ -54,7 +51,7 @@ class App extends React.Component {
               data-id={i}
               className='list-item'
               onClick={this.removeNumber.bind(this)}
-              key={i}>{item}
+              key={item}>{item}
             </li>)}
           </ReactCSSTransitionGroup>
         </ul>
